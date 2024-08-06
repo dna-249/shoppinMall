@@ -32,7 +32,7 @@ export const Search =()=>{
    <><div className="con-input"><input type="text" onChange={(e)=>setSearch(e.target.value)} placeholder="search..."/></div><div className="container3">
       
        {task.filter((task)=>{
-     return search.toLowerCase() === ''? task : task.title.toLowerCase().includes(search)
+     return search.toLowerCase() === ''? task: task.title.toLowerCase().includes(search)
    }).map((task, index )=>
                     <ul  key={index}>
                       <div className="container2"  onClick={display}>
