@@ -71,29 +71,6 @@ input:focus{
   color: azure;
 }
 
-
-@media (min-width:300px) {
-  .container{
-  font-size:15px;
-};
-a{
- display: none;
-};
-}
-@media (min-width:700px) {
-  .container{
-  font-size:20px;
-};
-a{
-  margin: 1px;
-  padding: 8px;
-};
-}
-@media (min-width:1000px) {
-  .container{
-  font-size:20px;
-}
-}
 body{
   margin: 0;
   background-color: rgb(66, 19, 109);
