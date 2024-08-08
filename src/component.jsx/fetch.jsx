@@ -3,6 +3,8 @@ export const Fetch =()=>{
     const [task, setTask] = useState([]);
     const [isLoading, setIsLoading] =useState(true);
     const [isError, setIsError] = useState(false)
+    const [isPage1, setIsPage1] =useState(false);
+    const [price, setPrice] = useState('');
     
 
     useEffect(()=>{
@@ -17,11 +19,12 @@ export const Fetch =()=>{
         .catch(()=> setIsError(true))
         .finally(()=> setIsLoading(false))
     },[])
-    function display(event){
-        
-        event.target.style.width="800px",
-        event.target.style.display="block",
-        event.target.style.left="0"
+    function display(){
+        setIsPage1(!isPage1);
+    }
+    function prices(){
+      setPrice(()=>
+        alert('congratulations'))
     }
    
     return isLoading?(<div> is loading...</div>)
@@ -30,11 +33,11 @@ export const Fetch =()=>{
      <><div className="container3">
          {task.map((task, index )=>
                       <ul  key={index}>
-                        <div className="container2"  onClick={display}>
+                        <div className={`${isPage1 ? "container4":"container2" }`}  onClick={display}>
             <h2> {task.title}</h2> <br/>
-          <img width={200} src={task.images[0]}/> <br/>
+          <img width={100} src={task.images[0]}/> <br/>
           {task.description} <br/>
-           {task.price} 
+          <button onClick={prices}>price:$ {task.price} </button>
            </div>            
          </ul>)}
         </div>
