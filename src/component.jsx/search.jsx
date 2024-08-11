@@ -44,16 +44,12 @@ export const Search =()=>{
    }).map((task, index )=>
                     <div  key={index}>
                       <div className={`${isPage ? "container4":"container2" }`} onClick={display}>
-                      <div className={hidden}>
+                      <div>
           <h2> {task.title}</h2> <br/>
         <img width={100} src={task.images[0]}/> <br/>
         {task.description} <br/>
          {task.price}
-         </div>
-
-         <div > {task.title}
-          <img width={200} src={task.images[0]} onClick={display1}/> </div> 
-         </div>            
+         </div> </div>            
        </div>)}
       </div>
       

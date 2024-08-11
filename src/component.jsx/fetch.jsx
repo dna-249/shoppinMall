@@ -32,14 +32,14 @@ export const Fetch =()=>{
      :( 
      <><div className="container3">
          {task.map((task, index )=>
-                      <ul  key={index}>
+                      <div  key={index}>
                         <div className={`${isPage1 ? "container4":"container2" }`}  onClick={display}>
             <h2> {task.title}</h2> <br/>
           <img width={100} src={task.images[0]}/> <br/>
           {task.description} <br/>
           <button onClick={prices}>price:$ {task.price} </button>
            </div>            
-         </ul>)}
+         </div>)}
         </div>
         
         </>
