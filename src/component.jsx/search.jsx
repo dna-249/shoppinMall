@@ -6,6 +6,10 @@ export const Search =()=>{
   const [isError, setIsError] = useState(false)
   const [search, setSearch] = useState("");
   const [isPage, setIsPage ] =useState(false);
+  const [isPage1, setIsPage1 ] =useState(false);
+  const [visible, setVisible]=useState("visible");
+  const [hidden , setHidden] = useState("hide");
+  
   
 
   useEffect(()=>{
@@ -23,6 +27,12 @@ export const Search =()=>{
   function display(){
       setIsPage(!isPage);
   }
+  function display1(){
+    setIsPage1(!isPage1)
+       if(!isPage1){
+        setVisible('visible'), setHidden("hide")
+       }else{ setVisible('hide'), setHidden("visible")}
+  }
  
   return isLoading? (<div className="container5"> is loading...</div>)
    : isError?(<div className="container5"> network is unavailable </div>)
@@ -34,10 +44,15 @@ export const Search =()=>{
    }).map((task, index )=>
                     <div  key={index}>
                       <div className={`${isPage ? "container4":"container2" }`} onClick={display}>
+                      <div className={hidden}>
           <h2> {task.title}</h2> <br/>
         <img width={100} src={task.images[0]}/> <br/>
         {task.description} <br/>
-         {task.price} 
+         {task.price}
+         </div>
+
+         <div > {task.title}
+          <img width={200} src={task.images[0]} onClick={display1}/> </div> 
          </div>            
        </div>)}
       </div>

@@ -6,7 +6,7 @@ import { Search } from './component.jsx/search'
 import { Review } from './component.jsx/review'
 import { useState } from 'react'                        
 function App() {
-  const [call,setCall]= useState();
+
   const [toggle,setToggle]=useState("hide");
   const [toggle1,setToggle1]=useState("hide");
   const [toggle2,setToggle2]=useState("hide");
@@ -32,13 +32,11 @@ const togglee2 =()=>{
     else { setToggle("hide"),setToggle1("visible")}
 }
  
-  const callIt=()=>{
-     setCall(alert("hello"))
-  }
    return (
     <>
       <div>
-     <Header togglee={togglee}
+     <Header 
+     togglee={togglee}
      togglee1={togglee1}
      togglee2={togglee2}/>
      </div>
@@ -52,7 +50,7 @@ const togglee2 =()=>{
       </div>
 
       <div className={toggle2}>
-      <Review   onClick={callIt}/>
+      <Review />
       </div>
     </>
   )
