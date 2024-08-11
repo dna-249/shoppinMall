@@ -1,14 +1,18 @@
 import { useState } from "react";
-export const Review = () =>{
-    const [isChange, setIsChange] = useState(false);
-     const alert =()=>{
-        setIsChange(!isChange);
-     }
-    return(<>
-        <div > ya Rasulillah</div>
-     <div>
-     <button onClick={alert}>alert</button>
+export const Review = ({onClick}) =>{
+    const [toggle,setToggle]=useState("hide");
+    const [isToggle, setIsToggle]=useState(false);
+
+    const togglee =()=>{
+        setIsToggle(!isToggle);
+        !isToggle?
+            setToggle("visible"): setToggle("hide")
+    }
      
-        </div>
+    return(<>
+       <div className={toggle} onClick={togglee}>hello my hajiya maryam
+
+       </div>
+       <button onClick={onClick}>call</button>
     </>)
 }

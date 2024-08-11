@@ -1,4 +1,9 @@
-
+.hide{
+  display: none;
+}
+.visible{
+ display: block;
+}
 
 .search{
   background-color: aliceblue;
@@ -10,30 +15,17 @@
   align-content: center;
   justify-content: center;
 
+}
 
-}
-div:target{
-  display: block;
-  margin-top: 20%;
-}
-.fetch{
-  display: none;
-}
-.searchs{
-  display:none;
-}
-.review{
-  margin-top: 500px;
-}
 .container4{
   font-size: large;
-  background-color: rgba(177, 175, 175, 0.475);
+  background-color:  rgb(154, 126, 181);
   color: azure;
   width: 90%;
   position: block;
   align-content: center;
   text-align: center;
-  height: fit-content;
+  height: 400px;
   border-radius: 10px;
   padding: 10px;
 
@@ -47,9 +39,9 @@ div:target{
   padding: 100px;
 }
 input{
-  height: 50px;
+  height: 30px;
   background-color: rgba(240, 255, 255, 0.602);
-  width: 50%;
+  width: 80%;
   border: none;
   text-align: center;
   font-size: large;
@@ -69,25 +61,42 @@ input:focus{
   top: 100px;
   font-size: large;
   color: azure;
+  padding-bottom: 20px;
 }
-
+.search{
+  padding-left: 20px;
+}
 body{
   margin: 0;
   background-color: rgb(66, 19, 109);
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+.container5{
+  color:azure;
+  text-align: center;
+  align-content: center;
+  align-items: center;
+  margin-top:300px;
 }
 .container2{
   background-color: rgb(154, 126, 181);
-  margin: auto;
+  margin: 10px;
   border:none;
   border-radius: 10px;
   height: fit-content;
   text-align: center;
   align-content: center;
+  justify-content: center;
+  align-items: center;
   font-size: small;
   color: aliceblue;
-  padding: 5px;
-width: 200px;
-margin-top:1px;
+  padding: 20px;
+  width: 200px;
+  margin-top:1px;
+  
   
 }
 .container3{
@@ -99,7 +108,7 @@ margin-top:1px;
   
 }
 .container:not(h4){
-  background-color: rgb(160, 5, 211);
+  background-color: rgba(111, 3, 212, 0.983);
   color:white;
   display: flex;
   justify-content: flex-end;
@@ -117,6 +126,7 @@ h4{
   background-color: azure;
   color:blue;
   border-radius:10px;
+  font-size:0.8rem;
 }
 ul{
   list-style: none;
@@ -128,10 +138,11 @@ ul{
 a{
   text-decoration: none;
   border:none;
-  padding: 10px;
+  padding: 5px;
   background-color:rgb(76, 27, 122);
   color:rgb(246, 246, 252);
   border-radius:5px;
   margin: 2px;
   box-shadow: 12px 12px 10spx rgba(0, 0, 0, 0.1);
+  font-size: 0.8rem;
 }

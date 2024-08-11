@@ -27,8 +27,8 @@ export const Fetch =()=>{
         alert('congratulations'))
     }
    
-    return isLoading?(<div> is loading...</div>)
-     : isError?(<div> network is unavailable </div>)
+    return isLoading?(<div className="container5"> is loading...</div>)
+     : isError?(<div className="container5"> network is unavailable </div>)
      :( 
      <><div className="container3">
          {task.map((task, index )=>

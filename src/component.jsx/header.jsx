@@ -1,13 +1,15 @@
-export const Header =()=>{
+
+export const Header =({ togglee, togglee1, togglee2})=>{
+    
     return(
         <>
         
         <div className="container">
         <h4>ShoppingMall</h4>
             <ul>
-                <li><a href="#fetch">Market</a></li>
-                <li><a href="#search">Search...</a></li>
-                <li><a href="#review">Review</a></li>
+                <li><a onClick={togglee1}>Market</a></li>
+                <li><a onClick={togglee}>Search...</a></li>
+                <li><a onClick={togglee2}>Review</a></li>
             </ul>
         </div>
         </>

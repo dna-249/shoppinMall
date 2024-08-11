@@ -24,8 +24,8 @@ export const Search =()=>{
       setIsPage(!isPage);
   }
  
-  return isLoading? (<div > is loading...</div>)
-   : isError?(<div> network is unavailable </div>)
+  return isLoading? (<div className="container5"> is loading...</div>)
+   : isError?(<div className="container5"> network is unavailable </div>)
    :( 
    <><div className="con-input"><input type="text" onChange={(e)=>setSearch(e.target.value)} placeholder="search..."/></div><div className="container3">
       
