@@ -1,10 +1,10 @@
-import React from 'react'
-import './App.css'
-import { Fetch } from './component.jsx/fetch'
-import{Header} from  './component.jsx/header'
-import { Search } from './component.jsx/search'
-import { Review } from './component.jsx/review'
-import { useState } from 'react'                        
+import React from 'react';
+import './App.css';
+import { Fetch } from './component.jsx/fetch';
+import{Header} from  './component.jsx/header';
+import { Search } from './component.jsx/search';
+import { Review } from './component.jsx/review';
+import { useState } from 'react';                        
 function App() {
 
   const [toggle,setToggle]=useState("hide");
