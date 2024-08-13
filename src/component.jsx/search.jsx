@@ -35,7 +35,7 @@ function display1(){
      }else{ setVisible('hide'), setHidden("visible")}
 }
  
-  return isLoading? (<div className="container5"> is loading...</div>)
+  return isLoading? (<div className="container5"> Loading...</div>)
    : isError?(<div className="container5"> network is unavailable </div>)
    :( 
    <><div className="con-input">
@@ -45,13 +45,13 @@ function display1(){
        {task.filter((task)=>{
      return search.toLowerCase() === ''? task : task.title.toLowerCase().includes(search)
    }).map((task, index )=>
-    <div  key={index}>
-    <div className={`${isPage1 ? "container4" : "container2" }`}  onClick={display}>
-<h7> {task.title} <br/>
-<img width={100} src={task.images[0]}/> <br/>
-<br/>
-</h7>
-</div>              
+                    <div  key={index}>
+                        <div className={`${isPage ? "container4" : "container2" }`}  onClick={display}>
+            <h7> {task.title} <br/>
+          <img width={100} src={task.images[0]}/> <br/>
+           <br/>
+          </h7>
+           </div>              
        </div>)}
       </div>
       </>
